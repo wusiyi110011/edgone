@@ -1,0 +1,10 @@
+{
+  "name": "openclaw-esa",
+  "entry": "./server.js",
+  "installCommand": "npm install",
+  "buildCommand": "node --check server.js",
+  "assets": {
+    "directory": "./public",
+    "notFoundStrategy": "singlePageApplication"
+  }
+}

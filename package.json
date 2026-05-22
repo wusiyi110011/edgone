@@ -1,0 +1,28 @@
+{
+  "name": "openclaw",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dual-chamber chest drainage bottle teaching game",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix apps/server run dev\" \"npm --prefix apps/h5 run dev -- --host 0.0.0.0\"",
+    "build": "npm --prefix apps/server run build && npm --prefix apps/h5 run build",
+    "build:h5": "npm --prefix apps/h5 run build",
+    "build:server": "npm --prefix apps/server run build",
+    "build:edgeone": "npm --prefix apps/h5 run build && node scripts/build-edgeone.mjs"
+  },
+  "keywords": [
+    "wechat",
+    "h5",
+    "threejs",
+    "medical-training"
+  ],
+  "workspaces": [
+    "apps/h5",
+    "apps/server"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "playwright": "^1.58.2"
+  }
+}

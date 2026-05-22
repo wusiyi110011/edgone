@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="hero">
+    <view>
+      <text class="eyebrow">Mini Program Shell</text>
+      <text class="title">双腔式胸腔闭式引流瓶接管训练</text>
+      <text class="desc">这里是原生微信小程序版本，3D 模型、两步接管流程和统计都直接运行在小程序与云函数中。</text>
+    </view>
+  </view>
+
+  <view class="stats-grid">
+    <view class="metric-card">
+      <text class="metric-value">{{stats ? stats.correctCount : 0}}</text>
+      <text class="metric-label">正确人数</text>
+    </view>
+    <view class="metric-card">
+      <text class="metric-value">{{stats ? stats.incorrectCount : 0}}</text>
+      <text class="metric-label">错误人数</text>
+    </view>
+    <view class="metric-card">
+      <text class="metric-value">{{stats ? stats.accuracy : 0}}%</text>
+      <text class="metric-label">正确率</text>
+    </view>
+  </view>
+
+  <view class="card">
+    <text class="label">学生昵称</text>
+    <input
+      class="name-input"
+      placeholder="例如：护理 2 班-李同学"
+      value="{{playerName}}"
+      bindinput="onNameInput"
+    />
+    <button class="start-button" bindtap="openGame">进入训练</button>
+    <text wx:if="{{errorText}}" class="error-text">{{errorText}}</text>
+  </view>
+
+  <view class="card tips">
+    <text class="section-title">接入前请先修改</text>
+    <text>1. utils/config.js 中的 envId</text>
+    <text>2. 微信开发者工具中开通云开发环境</text>
+    <text>3. 上传并部署 cloudfunctions/gameService</text>
+  </view>
+</view>

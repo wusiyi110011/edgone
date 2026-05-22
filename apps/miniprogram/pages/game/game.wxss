@@ -1,0 +1,128 @@
+.page {
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  background: #f4fbff;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 28rpx;
+  border: 2rpx solid rgba(110, 149, 177, 0.14);
+  box-shadow: 0 18rpx 40rpx rgba(32, 76, 116, 0.08);
+  padding: 24rpx;
+}
+
+.top-card {
+  padding-bottom: 28rpx;
+}
+
+.eyebrow {
+  font-size: 22rpx;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #5380a3;
+}
+
+.title {
+  display: block;
+  margin-top: 14rpx;
+  font-size: 48rpx;
+  line-height: 1.16;
+  font-weight: 700;
+  color: #17344e;
+}
+
+.desc,
+.detail-text,
+.small-text,
+.viewer-tip {
+  display: block;
+  margin-top: 14rpx;
+  color: #55718a;
+  font-size: 26rpx;
+  line-height: 1.6;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  color: #17344e;
+  font-weight: 700;
+}
+
+.progress {
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+  background: rgba(17, 91, 145, 0.1);
+  color: #1a537e;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.name-input {
+  height: 88rpx;
+  padding: 0 24rpx;
+  margin-top: 18rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid rgba(113, 149, 173, 0.24);
+  background: #f9fcff;
+}
+
+.primary-button,
+.secondary-button {
+  margin-top: 20rpx;
+  height: 88rpx;
+  border-radius: 999rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #165685, #2b7bb0);
+  color: #ffffff;
+}
+
+.secondary-button {
+  background: rgba(22, 86, 133, 0.12);
+  color: #165685;
+}
+
+.viewer-card {
+  position: relative;
+}
+
+.viewer-canvas {
+  width: 100%;
+  height: 760rpx;
+  border-radius: 22rpx;
+  margin-top: 18rpx;
+  background: radial-gradient(circle at top, rgba(160, 214, 245, 0.48), rgba(255, 255, 255, 0.96) 58%);
+}
+
+.overlay {
+  margin-top: 16rpx;
+  padding: 18rpx 20rpx;
+  border-radius: 20rpx;
+  background: rgba(10, 33, 56, 0.76);
+}
+
+.overlay text {
+  color: #f4fbff;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.error-text {
+  display: block;
+  margin-top: 16rpx;
+  color: #b4444e;
+  font-size: 24rpx;
+}

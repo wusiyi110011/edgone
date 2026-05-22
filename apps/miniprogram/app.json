@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/game/game"
+  ],
+  "window": {
+    "navigationBarTitleText": "胸腔引流接管训练",
+    "navigationBarBackgroundColor": "#f4fbff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f4fbff"
+  },
+  "cloud": true,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

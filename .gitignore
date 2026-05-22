@@ -1,0 +1,6 @@
+node_modules
+dist
+.DS_Store
+apps/server/data/results.json
+apps/h5/node_modules
+apps/server/node_modules

@@ -1,0 +1,8 @@
+node_modules
+apps/h5/node_modules
+apps/server/node_modules
+apps/h5/dist
+apps/server/dist
+.git
+.DS_Store
+*.log

@@ -1,0 +1,58 @@
+<view class="page">
+  <view class="card top-card">
+    <text class="eyebrow">原生小程序训练</text>
+    <text class="title">双腔式胸腔闭式引流瓶接管训练</text>
+    <text class="desc">先连接排气口和水封管接口，再连接引流病人的管，最后提交判定。</text>
+  </view>
+
+  <view class="card">
+    <view class="section-head">
+      <text class="section-title">学生信息</text>
+      <text class="progress">进度 {{progress}}/2</text>
+    </view>
+    <input
+      class="name-input"
+      placeholder="例如：护理 1 班-张同学"
+      value="{{playerName}}"
+      bindinput="onNameInput"
+    />
+    <button class="primary-button" bindtap="handleStart" loading="{{starting}}">
+      {{sessionId && !result ? '重新开始本轮' : '开始挑战'}}
+    </button>
+  </view>
+
+  <view class="card viewer-card">
+    <view class="section-head">
+      <text class="section-title">3D 模型</text>
+      <text class="viewer-tip">单指旋转，双指缩放，点蓝色孔位接管</text>
+    </view>
+    <canvas
+      id="webgl"
+      type="webgl"
+      class="viewer-canvas"
+      bindtouchstart="onTouchStart"
+      bindtouchmove="onTouchMove"
+      bindtouchend="onTouchEnd"
+    ></canvas>
+    <view class="overlay">
+      <text>{{statusText}}</text>
+    </view>
+  </view>
+
+  <view class="card">
+    <text class="section-title">当前选择</text>
+    <text class="detail-text">第一步：{{stepOneText}}</text>
+    <text class="detail-text">第二步：{{stepTwoText}}</text>
+    <button class="secondary-button" bindtap="handleSubmit" loading="{{submitting}}" disabled="{{!sessionId || result}}">
+      提交判定
+    </button>
+    <text wx:if="{{startedAt}}" class="small-text">本局开始于 {{startedAt}}</text>
+    <text wx:if="{{errorText}}" class="error-text">{{errorText}}</text>
+  </view>
+
+  <view wx:if="{{result}}" class="card">
+    <text class="section-title">{{result.isCorrect ? '本次连接正确' : '本次连接错误'}}</text>
+    <text class="detail-text">第一步正确答案：排气口 -> 水封管接口</text>
+    <text class="detail-text">第二步正确答案：引流管接口 -> 引流病人的管</text>
+  </view>
+</view>
